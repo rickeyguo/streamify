@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 
-import { Searchbar, Sidebar, MusicPlayer, TopPlay } from "./components";
+import { Searchbar, MusicPlayer, TopPlay } from "./components";
 import {
   ArtistDetails,
   TopArtists,
@@ -16,7 +16,6 @@ const App = () => {
 
   return (
     <div className="relative flex">
-      <Sidebar />
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#c22929]">
         <Searchbar />
 
