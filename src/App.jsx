@@ -1,11 +1,10 @@
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 
-import { Searchbar, Sidebar, MusicPlayer, TopPlay } from "./components";
+import { Searchbar, MusicPlayer, TopPlay } from "./components";
 import {
   ArtistDetails,
   TopArtists,
-  AroundYou,
   Discover,
   Search,
   SongDetails,
@@ -17,7 +16,6 @@ const App = () => {
 
   return (
     <div className="relative flex">
-      <Sidebar />
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#c22929]">
         <Searchbar />
 
@@ -27,7 +25,6 @@ const App = () => {
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
               <Route path="/top-charts" element={<TopCharts />} />
-              <Route path="/around-you" element={<AroundYou />} />
               <Route path="/artists/:id" element={<ArtistDetails />} />
               <Route path="/songs/:songid" element={<SongDetails />} />
               <Route path="/search/:searchTerm" element={<Search />} />
